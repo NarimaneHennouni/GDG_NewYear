@@ -17,15 +17,20 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="confetti.css">
 <!--===============================================================================================-->
 </head>
-<body>
+<body class="demo wrapper" >
+	
 	<audio src="audio/audio.mp3" autoplay loop>
 		<source src="audio/audio.ogg" type="audio/ogg">
 		<source src="audio/audio.mp3" type="audio/mpeg">
 		Your browser does not support the audio element (HTML5). Please update your Browser.
 	</audio>
 	
+			
+				
+			
 	<!--  -->
 	<div class="simpleslide100">
 		<div class="simpleslide100-item bg-img1" style="background-image: url('images/img1.jpg');"></div>
@@ -33,31 +38,24 @@
 		<div class="simpleslide100-item bg-img1" style="background-image: url('images/img3.jpg');"></div>
 		<div class="simpleslide100-item bg-img1" style="background-image: url('images/img5.jpg');"></div>
 		<div class="simpleslide100-item bg-img1" style="background-image: url('images/img6.jpg');"></div>
-		<div class="simpleslide100-item bg-img1" style="background-image: url('images/img7.jpg');"></div>
-		<div class="simpleslide100-item bg-img1" style="background-image: url('images/img8.jpg');"></div>
-		<div class="simpleslide100-item bg-img1" style="background-image: url('images/img10.jpg');"></div>
 		<div class="simpleslide100-item bg-img1" style="background-image: url('images/img11.jpg');"></div>
 	</div>
+	
 
-	<div class="flex-col-c-sb size1 overlay1">
+	<div class="flex-col-c-sb size1 ">
 		<!--  -->
-		<div class="w-full flex-w flex-sb-m p-l-80 p-r-80 p-t-22 p-lr-15-sm">
-			<div class="wrappic1 m-r-30 m-t-10 m-b-10" style="margin-bottom: 30px; height: 40px;
-			margin-left: 1000px;">
-				<a href="#"><img src="images/wtm.jpg" style="    height: 40px;
-					margin-left: 200px;
-					margin-top: 11px;"></a>
-				
-			</div>
+		<div class="w-full flex-w flex-sb-m p-l-80 p-r-80 p-t-22 p-lr-15-sm"></div>
 			
-				<a href="#"><img src="images/logo.jpg" style=" height: 40px;margin-left: 1000px;
-					margin-top: -100px;
-					margin-right: 100px;"></a>
-			
-
-
 		<!--  -->
-		<div class="flex-col-c-m p-l-15 p-r-15 p-t-50 p-b-120" style="margin-left: 250px; position: relative;;">
+		<div class="flex-col-c-m p-l-15 p-r-15 p-t-50 p-b-120" style="margin-left: 0px;position: relative;padding-bottom: 50px;border-bottom-width: 20px; padding-top: 20px;">
+			<h1 id="date">datteee</h1>
+			<img src="images/wtmb.png" style=" height: 100px;width: 120px;
+			margin-left: 1000px;
+			margin-bottom: 60px;">
+		<img src="images/gdglogob.png" style=" height: 60px;margin-left: 00px;
+			margin-top: -150px;
+			margin-right: 1000px;     margin-bottom: 100px;">
+		
 			<h2 id="header" class="l1-txt1 txt-center p-b-40 respon1 bluelight" style="font-family:cursive; font-weight: bolder;text-shadow: 1px 1px 2px black, 0 0 25px lightblue, 0 0 5px darkblue; letter-spacing: 8px; color: paleturquoise;">
 				Happy New Year 
 			</h2>
@@ -126,6 +124,20 @@
 			//go to " http://momentjs.com/timezone/ " to get timezone
 		});
 		
+			document.getElementById("date").innerHTML = new Date(2019,12,31,23,59,59);
+		
+	</script>
+	<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="jquery.fireworks.js"></script>
+	<script>
+		if (Date()>= new Date(2020,01,01,00,00,00)){
+	$('.demo').fireworks({ 
+		sound: true, // sound effect
+		opacity: 0.6, 
+		width: '100%', 
+		height: '100%' 
+	  });
+	
 	</script>
 <!--===============================================================================================-->
 	<script src="vendor/tilt/tilt.jquery.min.js"></script>
@@ -136,6 +148,7 @@
 	</script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
+	<script src="confetti.js"></script>
 
 </body>
 </html>
